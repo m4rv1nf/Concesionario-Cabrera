@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cabrera Motos</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+  <header>
+    <h1>CABRERA MOTOS</h1>
+  </header>
+
+  <nav>
+    <a class="subtema" href="#naked">Naked</a>
+    <a class="subtema" href="#motocross">Motocross</a>
+    <a class="subtema" href="#deportivo">Deportivo</a>
+    <a class="subtema" href="#scrambler">Scrambler</a>
+  </nav>
+
+  <section id="naked">
+    <h2>Motos Naked</h2>
+    <div class="gallery">
+      <img src="https://cdn.pixabay.com/photo/2017/09/16/16/09/motorcycle-2752070_1280.jpg" alt="Moto Naked 1" onclick="showModal(this.src, 'Moto naked ligera, ideal para ciudad')">
+      <img src="https://cdn.pixabay.com/photo/2016/11/23/18/28/motorbike-1851509_1280.jpg" alt="Moto Naked 2" onclick="showModal(this.src, 'Moto naked con excelente maniobrabilidad')">
+    </div>
+  </section>
+
+  <section id="motocross">
+    <h2>Motocross</h2>
+    <div class="gallery">
+      <img src="https://cdn.pixabay.com/photo/2018/04/11/21/43/motocross-3313966_1280.jpg" alt="Motocross 1" onclick="showModal(this.src, 'Moto de motocross para terrenos extremos')">
+      <img src="https://cdn.pixabay.com/photo/2020/08/11/09/38/motocross-5479787_1280.jpg" alt="Motocross 2" onclick="showModal(this.src, 'Moto ligera ideal para saltos y tierra')">
+    </div>
+  </section>
+
+  <section id="deportivo">
+    <h2>Deportivas</h2>
+    <div class="gallery">
+      <img src="https://cdn.pixabay.com/photo/2020/02/14/19/53/motorcycle-4848880_1280.jpg" alt="Deportiva 1" onclick="showModal(this.src, 'Moto deportiva de alta velocidad')">
+      <img src="https://cdn.pixabay.com/photo/2015/01/19/13/51/motorcycle-604108_1280.jpg" alt="Deportiva 2" onclick="showModal(this.src, 'Diseño aerodinámico para pista')">
+    </div>
+  </section>
+
+  <section id="scrambler">
+    <h2>Scrambler</h2>
+    <div class="gallery">
+      <img src="https://cdn.pixabay.com/photo/2016/06/21/22/41/motorcycle-1476007_1280.jpg" alt="Scrambler 1" onclick="showModal(this.src, 'Scrambler clásica con estilo retro')">
+      <img src="https://cdn.pixabay.com/photo/2021/03/19/21/28/motorbike-6108444_1280.jpg" alt="Scrambler 2" onclick="showModal(this.src, 'Scrambler versátil para ciudad y campo')">
+    </div>
+  </section>
+
+  <section class="historia">
+    <h2>Nuestra Historia</h2>
+    <p>
+      Cabrera Motos nació con la pasión por crear máquinas que desafíen los límites. Desde un pequeño taller hasta un estudio reconocido,
+      hemos perfeccionado cada diseño con innovación, fuerza y estilo. Nuestra historia está marcada por la dedicación, el trabajo duro
+      y el deseo de ofrecer lo mejor en motociclismo.
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Cabrera Motos - Todos los derechos reservados.
+  </footer>
+
+  <!-- Modal para mostrar imagen ampliada -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <span id="modalText"></span>
+    <img id="modalImage" src="">
+  </div>
+
+  <script>
+    function showModal(src, text) {
+      document.getElementById("modal").style.display = "flex";
+      document.getElementById("modalImage").src = src;
+      document.getElementById("modalText").innerText = text;
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
